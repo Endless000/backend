@@ -22,3 +22,7 @@ for($q=0;$q<count($nums);$q++){
 }
 echo $sum/count($nums);
 ?>
+
+
+echo "  Login  <input type='text' name='login' value='".$abc."'>";
+echo "  Password  <input type='text' name='pass' value='".$cba."'>";
