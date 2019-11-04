@@ -12,3 +12,40 @@
   </form>
 </body>
 </html>
+$workers =[];
+$worker[1] = ["name" => "Misha", "email" => "misha@test.com"];
+$worker[2] = ["name" => "Bodya", "email" => "bodya@gmail.com"];
+$worker[3] = ["name" => "Irakli", "email" => "irakli@gmail.com"];
+$worker[4] = ["name" => "Roman", "email" => "roman@gmail.com"];
+$worker[5] = ["name" => "Anton", "email" => "anton@gmail.com"];
+var_dump($worker);
+
+
+$maxworkerid = 0;
+$minworkerid = 1;
+
+foreach($worker as $userid => $userinfo) {
+if ($maxworkerid < $userid) {
+$maxworkerid = $userid;
+}
+}
+echo "Max id = ". $maxworkerid;
+
+foreach($worker as $userid => $userinfo) {
+if ($minworkerid > $userid) {
+$minworkerid = $userid;
+}
+}
+echo '<pre>';
+    echo "Min id = ". $minworkerid;
+    echo '</pre>';
+
+$nextmax = 0;
+$nextmin = 0;
+
+foreach($worker as $userid => $userinfo) {
+if ($maxworkerid > $userid) {
+$nextmax = $userid;
+}
+}
+echo "Next max id = ".$nextmax;
