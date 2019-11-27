@@ -6,8 +6,10 @@ function getConnection(string $name)
     if (!isset($config[$name])) {
         echo 'Error Database Name';
     }
-
     $config = $config[$name];
-    return mysqli_connect($config['host'], $config['user'], $config['password'], $config['database_name']) or die ('Error Connect MSQL Server');
-
+    $connect = mysqli_connect($config['host'], $config['user'], $config['password'], $config['database_name']);
+    if ($connect) {
+        return $connect;
+    }
+    die ('ERROR CONNECT TO MYSQL SERVER');
 }

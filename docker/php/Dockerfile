@@ -6,6 +6,7 @@ RUN docker-php-ext-enable imagick
 RUN docker-php-ext-install pdo_mysql
 RUN apt-get install -y zlib1g-dev
 RUN docker-php-ext-install zip
+RUN docker-php-ext-install mysqli
 
 RUN apt-get update
 RUN apt-get install -y

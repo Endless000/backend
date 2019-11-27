@@ -1,1 +1,25 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<?php if(isset($login) && $login) {?>
+    <h3> Thank for Register <?php echo $login ?> </h3>
+<? } ?>
+
+<?php if(isset($error) && $error) {?>
+    <h4 style="color: red"><?php echo $error ?> </h4>
+<? } ?>
+
+<form action="/login" method="post">
+    <label for="">Login or Email</label><br>
+    <input type="text" name="username" value=""><br>
+    <label for="">Password</label><br>
+    <input type="password" name="password" value=""><br>
+    <input type="submit" value="Login"><br>
+</form>
+</body>
+</html>
