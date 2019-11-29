@@ -1,1 +1,15 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+<a href="/logout">Logout</a>
+<h1> Welcome dear, <?php echo $user['login'] ?></h1>
+<h2> Your mail: <?php echo $user['email'] ?></h2>
+<h3> Your date registration: <?php echo $user['created_at'] ?></h3>
+
+</body>
+</html>
