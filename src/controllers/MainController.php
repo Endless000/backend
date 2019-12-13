@@ -1,10 +1,18 @@
 <?php
 
-
 namespace controllers;
 
+use core\Controller;
 
-class MainController
+
+class MainController extends Controller
 {
+    public function IndexAction() {
+
+        $this->view->render('Main page');
+
+    }
+
+
 
 }

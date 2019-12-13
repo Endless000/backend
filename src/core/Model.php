@@ -3,8 +3,15 @@
 
 namespace core;
 
+use lib\Db;
 
-class Model
+abstract class Model
 {
+    public $db;
+
+    public function __construct()
+    {
+        $this->db = new Db;
+    }
 
 }
